@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Studeon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+<!--//webfont-->
+<!--Animation-->
+<script src="js/wow.min.js"></script>
+<link href="css/animate.css" rel='stylesheet' type='text/css' />
+<script>
+	new WOW().init();
+</script>
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<!--<script type="text/javascript"src="js/underscore-min.js"></script>-->
+<script type="text/javascript"src="js/lodash.min.js"></script>
+<script>
+   
+$(document).ready(function() {
+ 
+ var input =[];
+ var hasil = '';
+   
+	
+	$(function() { 
+    $('input[type="checkbox"]').bind('click',function() {
+        if($(this).is(':checked')) {
+           input.push($(this).val());
+		   console.log(input);
+         }
+		  else{
+		  _.pull(input, $(this).val());
+		  console.log(input);
+		 }
+   });
+});
+
+            var list=[
+			{nama:"AB", id:["5","9","11","21"]}, 
+			{nama:"O", id:["17","18","19","20"] },
+			{nama:"B", id:["3","6","7","8","13","16"]},
+			{nama:"A", id:["1","2","4","10","12","14","15"]} 
+			]; 
+			
+			
+            $("#hasil_button").click(function() {
+			
+			var r1_box = document.getElementById('r1_box');
+            r1_box.style.display = (r1_box.style.display != 'none') ? 'visible' : '';
+			
+	        var arrayPull = [];
+            var result=_.filter(list, function(obj){
+			for(var i=0;i<input.length ;i++) {
+            if(_.includes(obj.id,input[i])){
+			console.log(obj.id,input[i]);
+            
+			arrayPull.push(obj.nama);
+			console.log(arrayPull);
+            }
+			console.log(_.chain(arrayPull).countBy().pairs().max(_.last).value());
+			hasil = (_.chain(arrayPull).countBy().pairs().max(_.last).value()[0]);
+			
+			} 
+          });
+		
+		    
+        if (hasil == 'O') {
+            document.getElementById('hasil_r1').innerHTML = "Anda memiliki golongan darah" + "<br><br>" + "<img src='images/o.png' width='100%'/>";
+        };
+        if (hasil == 'AB') {
+            document.getElementById('hasil_r1').innerHTML = "Anda memiliki golongan darah" + "<br><br>" + "<img src='images/ab.png' width='100%'/>";
+        };
+
+        if (hasil == 'A') {
+            document.getElementById('hasil_r1').innerHTML = "Anda memiliki golongan darah" + "<br><br>" + "<img src='images/a.png' width='100%'/>";
+        };
+		if (hasil == 'B') {
+            document.getElementById('hasil_r1').innerHTML = "Anda memiliki golongan darah" + "<br><br>" + "<img src='images/b.png' width='100%'/>";
+        };
+        
+    });
+	
+});
+</script>
+<style>
+.button {
+  float:right;
+  padding: 1em 3em;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-appearance: none;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  background:#ff1919;
+  border:none;
+  outline:none;
+  box-shadow: inset 0px -2px 11px #ff9999;
+  -webkit-box-shadow: inset 0px -2px 11px #ff9999;
+  -o-box-shadow: inset 0px -2px 11px #ff9999;
+  -moz-box-shadow: inset 0px -2px 11px #ff9999;
+  }
+  
+  .button:hover{
+	opacity: 0.8;
+}
+</style>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() { }
+
+function doClose() {
+		navigator.notification.confirm(
+			'Keluar dari Aplikasi?',
+			exitApp,
+			'Sistem Pakar GOL.Darah',
+			'Ok,Cancel'
+		);
+	}
+	
+	function exitApp(buttonIndex) {
+			if (buttonIndex == 1) {
+			navigator.app.exitApp();
+			}
+		else {
+			window.close();
+		}
+	}
+ </script>
+</head>
+<body>
+	<div class="header box css3-shadow" id="head">
+ 	<div class="container">
+	  <div class="header-top">
+	        <div class="logo wow bounceInLeft" data-wow-delay="0.4s">
+				<a href="index.html"><img width="60" src="images/logo.png" alt=""/></a>
+			 </div>
+			  <div class="h_menu4"><!-- start h_menu4 -->
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li><a  href="index.html">Home</a></li>
+				    <li><a href="sistem_pakar.html">Sistem Pakar</a></li>
+					<li><a href="artikel1.html">Sejarah</a></li>
+					<li><a href="artikel2.html">Karakter</a></li>
+					<li><a href="artikel3.html">Makanan</a></li>
+					<li><a href="artikel4.html">Olahraga </a></li>
+					<li><a onclick="doClose()" href="#">Keluar </a></li>
+
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+		  
+			<div class="clearfix"> </div>
+			
+		  </div><!-- end header_main4 -->
+	</div>
+</div>
+<!--start-slider-->
+	<div class="slider-bg">
+		<div class="container">
+			<div class="grid-1">
+				<div class="col-md-5 left-grid-1 wow bounceInLeft" data-wow-delay="0.4s">
+					<h1>Cari Tahu</h1>	
+					<h2>Yuk</h2>
+				</div>
+				<div class="col-md-7 right-grid-1 wow bounceInRight" data-wow-delay="0.7s">
+					<div class="slider">
+						<div class="callbacks_container">
+								<ul class="rslides" id="slider">
+									<li>
+									<img src="images/slide.png" class="img-responsive" alt="" />
+									</li>
+								 </ul>
+							</div>
+						</div>
+					</div>	
+				 </script><script src="js/responsiveslides.min.js"></script>
+						   <script>
+					    $(function () {
+					      $("#slider").responsiveSlides({
+					      	auto: true,
+					      	nav: true,
+					      	speed: 500,
+					        namespace: "callbacks",
+					        pager: true,
+					      });
+					    });
+					  </script>
+
+                    </div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+<!--//end-slider-->
+	<div class ="contact-section">
+			<div class="container">
+			<div id="about" class="service-section">
+    <div class="container">
+        <section>
+            <form class="ac-custom ac-checkbox ac-checkmark" autocomplete="off"autocomplete="off">
+                <h3 style="font-weight: 300;padding: 0 0 0.5em">Sistem Pakar Golongan Darah</h3>
+                <br><br>
+                <p style="font-size:17px">Penentuan Golongan Darah Berdasarkan Karakter :</p><br>
+				<img width="100%" src="images/instruksi.png" /><br><br>
+                <ul>
+                    <li>
+                        <input name="r1" type="checkbox" value="1">
+                        <label>Apakah anda dikategorikan orang yang perfeksionis dalam mengerjakan segala sesuatu?</label>
+                    </li>
+                    <li>
+                        <input name="r1" type="checkbox" value="2">
+                        <label>Apakah anda berkepala dingin saat menangani masalah?</label>
+                    </li>
+                    <li>
+                        <input name="r1" type="checkbox" value="3">
+                        <label>Selain dari wajah dan sifat, apakah kepribadian seseorang dan kepercayaan diri seseorang yang tinggi dapat memenuhi kriteria dalam memilih lawan jenis?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="4">
+                        <label>Apakah anda menaruh rasa simpatik terhadap orang yang terkena musibah?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="5">
+                        <label>Selain dari wajah dan sifat,apakah material & perasaan seseorang yang lemah-lembut dapat memenuhi kriteria dalam memilih lawan jenis?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="6">
+                        <label>Apakah anda benci dengan orang yang mengabaikan anda saat kerja tim?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="7">
+                        <label>Apakah anda memiliki banyak ide –ide yang cemerlang ?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="8">
+                        <label>Apakah anda dikatagorikan orang yang acuh terhadap keadaan atau kejadian di sekitar anda?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="9">
+                        <label>Apakah anda sependapat bahwa penghiatan, kemunafikan seseorang  merupakan hal yang paling tidak disukai? </label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="10">
+                        <label>Apakah anda mampu menganalisis sebuah laporan keuangan perusahaan dengan baik?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="11">
+                        <label>Apakah anda membenci teguran atau peringatan seseorang di depan umum karena kesalahan yang anda lakukan? </label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="12">
+                        <label>Apakah anda dikatogarikan orang yang bebas, yang tidak suka diikat dengan peraturan yang ada?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="13">
+                        <label>Selain dari wajah dan sifat,apakah ketulusan seseorang dan kepedulian seseorang terhadap orang lain dapat memenuhi kriteria dalam memilih lawan jenis?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="14">
+                        <label>Apakah anda selalu dihantuii dengan rasa kekawatiran yang berlebihan setelah melakukan sesuatu?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="15">
+                        <label>Apakah anda dikatagorikan orang yang selalu berubah-ubah (plin-plan) dalam mengambil keputusan?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="16">
+                        <label>Apakah anda dikatagorikan orang keras kepala ?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="17">
+                        <label>Apakah anda tidak suka apabila pendapat anda dibantahan orang lain?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="18">
+                        <label>Selain dari wajah dan sifat,apakah keluguan seseorang  dan postur badan yang bohay dapat memenuhi kriteria dalam memilih lawan jenis?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="19">
+                        <label>Apakah anda menyukai bergosip untuk membicarakan kesalahan orang lain?</label>
+                    </li>
+					 <li>
+                        <input name="r1" type="checkbox" value="20">
+                        <label>Apakah anda memiliki kemampuan menghapal yang baik?</label>
+                    </li>
+					
+                </ul>
+            </form>
+			 
+
+        </section>
+        <br/>
+       
+
+    </div>
+    <input class="button" type="button" id="hasil_button" value="Hasil" />
+	 <br><br>
+    <div style="display:none" id="r1_box" class="comments-main wow fadeInLeft animated" data-wow-delay="0.4s">
+   
+        <div class="col-md-9">
+            <b>Hasil</b>
+            <br/>
+            <br/>
+            <p id="hasil_r1">Belum ada hasil</p><br><br>
+         <input class="button" type="button" onclick="location.reload()" value="Ulangi" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    
+
+    
+</div>
+							
+				</div>
+			</div>
+			<!--/start-copyright-section-->
+				
+			
+			<!--//end-copyright-section-->
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript" src="js/move-top.js"></script>
+			<script type="text/javascript" src="js/easing.js"></script>
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#head" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+	<script src="js/svgcheckbx.js"></script>			
+</body>
+</html>

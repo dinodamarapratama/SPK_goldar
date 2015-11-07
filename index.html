@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Studeon Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Open+Sans:300italic,400italic,600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+<!--//webfont-->
+<!--Animation-->
+<script src="js/wow.min.js"></script>
+<link href="css/animate.css" rel='stylesheet' type='text/css' />
+<script>
+	new WOW().init();
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() { }
+
+function doClose() {
+		navigator.notification.confirm(
+			'Keluar dari Aplikasi?',
+			exitApp,
+			'Sistem Pakar GOL.Darah',
+			'Ok,Cancel'
+		);
+	}
+	
+	function exitApp(buttonIndex) {
+			if (buttonIndex == 1) {
+			navigator.app.exitApp();
+			}
+		else {
+			window.close();
+		}
+	}
+ </script>
+ <style>
+.button {
+  
+  padding: 1em 3em;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-appearance: none;
+  border-radius: 0.3em;
+  -webkit-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  background:#ff1919;
+  border:none;
+  outline:none;
+  box-shadow: inset 0px -2px 11px #ff9999;
+  -webkit-box-shadow: inset 0px -2px 11px #ff9999;
+  -o-box-shadow: inset 0px -2px 11px #ff9999;
+  -moz-box-shadow: inset 0px -2px 11px #ff9999;
+  }
+  
+  .button:hover{
+	opacity: 0.8;
+}
+</style>
+</head>
+<body>
+	<div class="header box css3-shadow" id="head">
+ 	<div class="container">
+	  <div class="header-top">
+	        <div class="logo wow bounceInLeft" data-wow-delay="0.4s">
+				<a href="index.html"><img width="60" src="images/logo.png" alt=""/></a>
+			 </div>
+			  <div class="h_menu4"><!-- start h_menu4 -->
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li><a  href="index.html">Home</a></li>
+				    <li><a href="sistem_pakar.html">Sistem Pakar</a></li>
+					<li><a href="artikel1.html">Sejarah</a></li>
+					<li><a href="artikel2.html">Karakter</a></li>
+					<li><a href="artikel3.html">Makanan</a></li>
+					<li><a href="artikel4.html">Olahraga </a></li>
+					<li><a onclick="doClose()" href="#">Keluar </a></li>
+
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div><!-- end h_menu4 -->
+		  
+			<div class="clearfix"> </div>
+			
+		  </div><!-- end header_main4 -->
+	</div>
+</div>
+<!--start-slider-->
+	<div class="slider-bg">
+		<div class="container">
+			<div class="grid-1">
+				<div class="col-md-5 left-grid-1 wow bounceInLeft" data-wow-delay="0.4s">
+					<h1>Cari Tahu</h1>	
+					<h2>Yuk</h2>
+				</div>
+				<div class="col-md-7 right-grid-1 wow bounceInRight" data-wow-delay="0.7s">
+					<div class="slider">
+						<div class="callbacks_container">
+								<ul class="rslides" id="slider">
+									<li>
+									<img src="images/slide.png" class="img-responsive" alt="" />
+									</li>
+								 </ul>
+							</div>
+						</div>
+					</div>	
+				 </script><script src="js/responsiveslides.min.js"></script>
+						   <script>
+					    $(function () {
+					      $("#slider").responsiveSlides({
+					      	auto: true,
+					      	nav: true,
+					      	speed: 500,
+					        namespace: "callbacks",
+					        pager: true,
+					      });
+					    });
+					  </script>
+
+                    </div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+<!--//end-slider-->
+	<div class ="contact-section">
+			<div class="container">
+				<div class="contact">
+					<h3 class="wow bounceIn" data-wow-delay="0.4s">Sistem Pakar Golongan Darah</h3>
+					<p class="wow fadeInUpBig animated" data-wow-delay="0.4s">Sistem Pakar Golongan Darah adalah aplikasi sistem pakar berbasis Mobile. Tujuan utama aplikasi ini adalah untuk menginformasikan pengguna sehingga mereka dapat golongan darah yang tepat berdasarkan karakteristik pengguna.</p>
+						 <br><input class="button" onclick="window.location.href='sistem_pakar.html'" type="button" id="hasil_button" value="Mulai" />
+					</div>
+							
+				</div>
+			</div>
+			<!--/start-copyright-section-->
+			
+			
+			<!--//end-copyright-section-->
+			<!--start-smoth-scrolling-->
+			<script type="text/javascript" src="js/move-top.js"></script>
+			<script type="text/javascript" src="js/easing.js"></script>
+			<script type="text/javascript">
+								jQuery(document).ready(function($) {
+									$(".scroll").click(function(event){		
+										event.preventDefault();
+										$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+									});
+								});
+								</script>
+							<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#head" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+			
+</body>
+</html>
