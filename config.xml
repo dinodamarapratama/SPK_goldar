@@ -2,9 +2,9 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
    xmlns:gap = "http://phonegap.com/ns/1.0"
    xmlns:android = "http://schemas.android.com/apk/res/android"
-   id = "com.phonegap.pdf" 
+   id = "com.phonegap.spkgoldar" 
    version = "1.0.0">
-   <name>pdf</name>  
+   <name>Sistem Pakar GOL.Darah</name>  
    <description>
 
    </description>
@@ -52,21 +52,17 @@
         </application>
     </gap:config-file>
   
-    <icon src="icon/48.png" /> 
-   <icon src="icon/24.png" gap:platform="android" gap:qualifier="ldpi" /> 
-   <icon src="icon/36.png" gap:platform="android" gap:qualifier="mdpi" />
-   <icon src="icon/48.png" gap:platform="android" gap:qualifier="hdpi" /> 
-   <icon src="icon/64.png" gap:platform="android" gap:qualifier="xhdpi" /> 
- 
-   <gap:splash src="splash/P4.png" gap:platform="android" gap:qualifier="port-ldpi" /> 
-   <gap:splash src="splash/P3.png" gap:platform="android" gap:qualifier="port-mdpi" /> 
-   <gap:splash src="splash/P2.png" gap:platform="android" gap:qualifier="port-hdpi" />
-   <gap:splash src="splash/P1.png" gap:platform="android" gap:qualifier="port-xhdpi" />
-   
-   <gap:splash src="splash/L4.png" gap:platform="android" gap:qualifier="land-ldpi" /> 
-   <gap:splash src="splash/L3.png" gap:platform="android" gap:qualifier="land-mdpi" />  
-   <gap:splash src="splash/L2.png" gap:platform="android" gap:qualifier="land-hdpi" />
-   <gap:splash src="splash/L1.png" gap:platform="android" gap:qualifier="land-xhdpi" />
+
+<icon src="images/customize4.png" />
+<icon src="images/customize1.png" gap:platform="android" gap:qualifier="ldpi" />
+<icon src="images/customize2.png" gap:platform="android" gap:qualifier="mdpi" />
+<icon src="images/customize3.png" gap:platform="android" gap:qualifier="hdpi" />
+<icon src="images/customize4.png" gap:platform="android" gap:qualifier="xhdpi" />
+
+<gap:splash src="images/screen.jpg" gap:platform="android" gap:qualifier="port-ldpi" />
+<gap:splash src="images/screen.jpg" gap:platform="android" gap:qualifier="port-mdpi" />
+<gap:splash src="images/screen.jpg" gap:platform="android" gap:qualifier="port-hdpi" />
+<gap:splash src="images/screen.jpg" gap:platform="android" gap:qualifier="port-xhdpi" />
 
   
    <access origin="*"/>
